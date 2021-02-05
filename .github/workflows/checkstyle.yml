@@ -29,3 +29,5 @@ jobs:
         workdir: .
         # Tool name to use for reviewdog reporter
         tool_name: reviewdog
+        # Properties file relative to the root directory.
+        properties_file: checkstyle_maven.properties
