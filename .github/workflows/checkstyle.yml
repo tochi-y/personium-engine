@@ -16,7 +16,7 @@ jobs:
         # GITHUB_TOKEN.
         github_token: ${{ secrets.GITHUB_TOKEN }}
         # Report level for reviewdog [info,warning,error]
-        level: info
+        level: error
         # Reporter of reviewdog command [github-pr-check,github-pr-review]
         reporter: github-pr-check
         # Filtering for the reviewdog command [added,diff_context,file,nofilter]. Default is `added`.
