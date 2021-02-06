@@ -26,7 +26,7 @@ jobs:
         # Checkstyle config file
         checkstyle_config: personium-checkstyle.xml
         # Working directory relative to the root directory.
-        workdir: .
+        workdir: src/
         # Tool name to use for reviewdog reporter
         tool_name: reviewdog
         # Properties file relative to the root directory.
