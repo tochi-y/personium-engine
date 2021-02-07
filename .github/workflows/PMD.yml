@@ -30,4 +30,4 @@ jobs:
         # uses: sfdx-actions/setup-pmd@26417684d940b38436ccc494ea7932126de1a270
         uses: sfdx-actions/setup-pmd@v1
       - name: Run PMD command
-        run: pmd -d src/ -f text
+        run: pmd -d src/ -R rulesets/java/quickstart.xml -f text
