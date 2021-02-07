@@ -25,9 +25,17 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: PMD Source Code Analyzer Action 
+      - name: Push PMD report
         # You may pin to the exact commit or the version.
-        # uses: sfdx-actions/setup-pmd@26417684d940b38436ccc494ea7932126de1a270
-        uses: sfdx-actions/setup-pmd@v1
-      - name: Run PMD command
-        run: pmd -d src/ -R rulesets/java/quickstart.xml -f text
+        # uses: jwgmeligmeyling/pmd-github-action@322e346bd76a0757c4d54ff9209e245965aa066d
+        uses: jwgmeligmeyling/pmd-github-action@v1.2
+        with:
+          # A file, directory or wildcard pattern that describes where to find the reports
+          path: src/
+          # Check run name under which the report is created
+          # name: # optional, default is PMD
+          # Check run title under which the report is created
+          # title: # optional, default is PMD Source Code Analyzer report
+          # Personal access token (PAT) used to fetch the repository. The PAT is configured with the local git config, which enables your scripts to run authenticated git commands. The post-job step removes the PAT. We recommend using a service account with the least permissions necessary. Also when generating a new PAT, select the least scopes necessary. [Learn more about creating and using encrypted secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)
+
+          # token: # optional, default is ${{ github.token }}
